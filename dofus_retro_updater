@@ -11,10 +11,10 @@ function uninstall {
 	rm -rf "/home/$USER/.config/Dofus Retro"
 }
 
-if [[ $1 -eq "update" ]] 
+if [[ $1 == "update" ]] 
 then
 	update
-elif [[ $1 -eq "install" ]]
+elif [[ $1 == "uninstall" ]]
 then
 	uninstall
 else
