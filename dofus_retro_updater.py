@@ -66,7 +66,6 @@ def mkdir() :
         os.remove(ARCHIVE_NAME)
 
 def main() :
-    print("*** DOFUS RETRO UPDATER for Linux [v0.0.1] ***")
     mkdir()
     if download() :
         untar()

@@ -5,6 +5,7 @@ function update {
 	python3 dofus_retro_updater.py
 	sudo mv retro "/usr/games"
 	# Adding Icons and .desktop file
+	echo "[+] Adding Desktop Shortcut Icon..."
 	wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.icns"
 	sudo mv "Dofus Retro.icns" "/usr/games/retro"
 	wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.desktop"
@@ -17,12 +18,17 @@ function update {
 	else
 		echo "[-] Unable to find your Desktop. You can move 'Dofus Retro.desktop' file to your Desktop if you want a Shortcut."
 	fi
+	echo "[+] OK."
 }
 
 function uninstall {
+	echo "[+] Removing all files..."
 	sudo rm -rf "/usr/games/retro"
 	rm -rf "/home/$USER/.config/Dofus Retro"
+	echo "[+] OK."
 }
+
+echo "*** DOFUS RETRO UPDATER for Linux ***"
 
 if [[ $1 == "update" ]] 
 then
