@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Dofus Retro
+Comment=Launch Dofus Retro
+Exec=/usr/games/retro/dofus1electron
+Icon=/usr/games/retro/Dofus Retro.icns
+Terminal=false
+
