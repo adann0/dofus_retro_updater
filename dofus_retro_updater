@@ -5,17 +5,17 @@ function update {
 	python3 dofus_retro_updater.py
 	sudo mv retro "/usr/games"
 	add_desktop_shortcut	
+}
 
 function add_desktop_shortcut {
-	# Adding Icons and .desktop file
 	echo "[+] Adding Desktop Shortcut Icon..."
 
 	wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.icns" -q
 	sudo mv "Dofus Retro.icns" "/usr/games/retro"
 
-	if ! [[ -f "/home/$USER/Desktop/Dofus Retro.desktop" ]] || [[ -f "/home/$USER/Bureau/Dofus Retro.desktop" ]]
+	if ! [[ -f "/home/$USER/Desktop/Dofus Retro.desktop" ]] && ! [[ -f "/home/$USER/Bureau/Dofus Retro.desktop" ]]
 	then
-		if ! [[ -f "Dofus Retro.desktop"]]
+		if ! [[ -f "Dofus Retro.desktop" ]]
 		then
 			wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.desktop" -q
 		fi
@@ -42,6 +42,8 @@ function uninstall {
 	echo "[+] Removing all files..."
 	sudo rm -rf "/usr/games/retro"
 	rm -rf "/home/$USER/.config/Dofus Retro"
+	rm "/home/$USER/Desktop/Dofus Retro.desktop"
+	rm "/home/$USER/Bureau/Dofus Retro.desktop"
 	echo "[+] OK."
 }
 
