@@ -42,8 +42,13 @@ function uninstall {
 	echo "[+] Removing all files..."
 	sudo rm -rf "/usr/games/retro"
 	rm -rf "/home/$USER/.config/Dofus Retro"
-	rm "/home/$USER/Desktop/Dofus Retro.desktop"
-	rm "/home/$USER/Bureau/Dofus Retro.desktop"
+	if [[ -d "/home/$USER/Desktop" ]] && [[ -f "/home/$USER/Desktop/Dofus Retro.desktop" ]]
+	then
+		rm "/home/$USER/Desktop/Dofus Retro.desktop"
+	elif [[ -d "/home/$USER/Bureau" ]] && [[ -f "/home/$USER/Bureau/Dofus Retro.desktop" ]]
+	then
+		rm "/home/$USER/Bureau/Dofus Retro.desktop"
+	fi
 	echo "[+] OK."
 }
 
