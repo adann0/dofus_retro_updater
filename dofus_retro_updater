@@ -16,6 +16,7 @@ function update {
 		sudo mv "Dofus Retro.desktop" "/home/$USER/Bureau"
 	else
 		echo "[-] Unable to find your Desktop. You can move 'Dofus Retro.desktop' file to your Desktop if you want a Shortcut."
+	fi
 }
 
 function uninstall {
