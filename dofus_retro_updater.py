@@ -8,7 +8,7 @@ import shutil
 import cloudscraper
 
 DOFUS_RETRO_URL = "https://download.dofus.com/retro/zip/linux64"
-INSTALL_FOLDER = "/opt/retro"
+INSTALL_FOLDER = "/usr/games/retro"
 ARCHIVE_NAME = "retro.tar.gz"
 
 def download() :
