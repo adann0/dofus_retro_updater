@@ -4,6 +4,18 @@ function update {
 	sudo rm -rf "/usr/games/retro"
 	python3 dofus_retro_updater.py
 	sudo mv retro "/usr/games"
+	# Adding Icons and .desktop file
+	wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.icns"
+	sudo mv "Dofus Retro.icns" "/usr/games/retro"
+	wget "https://github.com/adann0/dofus_retro_updater/raw/main/Dofus%20Retro.desktop"
+	if [[ -d "/home/$USER/Desktop" ]]
+	then
+		sudo mv "Dofus Retro.desktop" "/home/$USER/Desktop"
+	elif [[ -d "/home/$USER/Bureau" ]]
+	then
+		sudo mv "Dofus Retro.desktop" "/home/$USER/Bureau"
+	else
+		echo "[-] Unable to find your Desktop. You can move 'Dofus Retro.desktop' file to your Desktop if you want a Shortcut."
 }
 
 function uninstall {
