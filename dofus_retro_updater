@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo rm -rf "/usr/games/retro"
+
+python3 dofus_retro_updater.py
+
+sudo mv retro /usr/games
+
+echo "[+] ALL DONE."
