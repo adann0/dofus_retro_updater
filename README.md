@@ -2,6 +2,8 @@
 
 Un script d'installation et d'update pour Dofus Retro sous Linux.
 
+Testé sous Ubuntu 20.04 et Kubuntu 18.04.
+
 # Dependencies
 
 	$ sudo apt install git python3-venv
@@ -18,3 +20,5 @@ Un script d'installation et d'update pour Dofus Retro sous Linux.
 
 	./dofus_retro_updater update # install ou update le jeu
 	./dofus_retro_updater uninstall # uninstall le jeu
+
+L'application peut être executé après l'installation depuis le Bureau.
