@@ -1,9 +1,25 @@
 #!/bin/bash
 
-sudo rm -rf "/usr/games/retro"
+function update {
+	sudo rm -rf "/usr/games/retro"
+	python3 dofus_retro_updater.py
+	sudo mv retro "/usr/games"
+}
 
-python3 dofus_retro_updater.py
+function uninstall {
+	sudo rm -rf "/usr/games/retro"
+	rm -rf "/home/$USER/.config/Dofus Retro"
+}
 
-sudo mv retro /usr/games
+if [[ $1 -eq "update" ]] 
+then
+	update
+elif [[ $1 -eq "install" ]]
+then
+	uninstall
+else
+	echo "USAGE: ./dofus_retro_updater [update|uninstall]"
+	exit
+fi
 
 echo "[+] ALL DONE."
