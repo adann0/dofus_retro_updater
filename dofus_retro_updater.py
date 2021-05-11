@@ -8,8 +8,8 @@ import shutil
 import cloudscraper
 
 DOFUS_RETRO_URL = "https://download.dofus.com/retro/zip/linux64"
-INSTALL_FOLDER = "/usr/games/retro"
 ARCHIVE_NAME = "retro.tar.gz"
+EXTRACT_FOLDER = "retro"
 
 def download() :
     """
@@ -48,7 +48,7 @@ def untar() :
     """Untar le fichier 'retro.tar.gz' dans le repertoire 'retro'."""
     print("[+] Extracting...")
     tar = tarfile.open(ARCHIVE_NAME, "r:gz")
-    tar.extractall(path=INSTALL_FOLDER)
+    tar.extractall(path=EXTRACT_FOLDER)
     tar.close()
     print("[+] OK.")
 
@@ -60,13 +60,10 @@ def mkdir() :
     """
     Supprime les anciens répertoires et crée les répertoires necessaires pour l'installation."""
     print("[+] Clean Env...")
-    if os.path.exists(INSTALL_FOLDER) :
-        print("[+] Dofus Retro already exist. Removing all old files for a fresh install...")
-        shutil.rmtree(INSTALL_FOLDER)
+    if os.path.exists(EXTRACT_FOLDER) :
+        os.remove(EXTRACT_FOLDER)
     if os.path.exists(ARCHIVE_NAME) :
         os.remove(ARCHIVE_NAME)
-    os.mkdir(INSTALL_FOLDER)
-    print("[+] OK.")
 
 def main() :
     print("*** DOFUS RETRO UPDATER for Linux [v0.0.1] ***")
