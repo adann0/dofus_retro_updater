@@ -2,9 +2,13 @@
 
 function update {
 	sudo rm -rf "/usr/games/retro"
-	python3 dofus_retro_updater.py
+	rm -rf "retro.tar.gz"
+	rm -rf "retro"
+	./dlcfbp "retro.tar.gz" "https://download.dofus.com/retro/zip/linux64"
+	mkdir retro
+	tar -xf "retro.tar.gz" -C retro
 	sudo mv retro "/usr/games"
-	add_desktop_shortcut	
+	add_desktop_shortcut
 }
 
 function add_desktop_shortcut {
