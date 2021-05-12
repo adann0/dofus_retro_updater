@@ -1,6 +1,6 @@
 # dofus_retro_updater
 
-Un script d'installation et d'update pour Dofus Retro sous Linux.
+Un script d'installation et d'update pour le Client Dofus Retro sous Linux.
 
 Testé sous Ubuntu 20.04 et Kubuntu 18.04.
 
