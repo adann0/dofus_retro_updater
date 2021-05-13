@@ -23,3 +23,7 @@ Pour télécharger l'executable vous pouvez cliquer [ici](https://github.com/ada
 	make build
 
 L'executable se trouve dans `dist/dofus_retro_updater`
+
+## ToDo
+
+- Fix l'icone noir sous Kubuntu
