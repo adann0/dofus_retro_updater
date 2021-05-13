@@ -2,7 +2,7 @@
 
 Un script d'installation et d'update pour le Client Dofus Retro sous Linux.
 
-Pour télécharger l'executable vous pouvez cliquer ici.
+Pour télécharger l'executable vous pouvez cliquer [ici](https://github.com/adann0/dofus_retro_updater/releases/).
 
 ## Devs
 
