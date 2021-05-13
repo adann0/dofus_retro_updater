@@ -6,7 +6,7 @@ Testé sous Ubuntu 20.04 et Kubuntu 18.04.
 
 # Dependencies
 
-	$ sudo apt install git python3-venv
+	$ sudo apt install git python3-venv shc
 
 # Env
 
@@ -14,7 +14,9 @@ Testé sous Ubuntu 20.04 et Kubuntu 18.04.
 	cd dofus_retro_updater &&
 	python3 -m venv venv &&
 	source venv/bin/activate &&
-	pip install -r requirements.txt
+	pip install -r requirements.txt &&
+	pyinstaller dlcfbp.py --name dlcfbp --add-data "venv/lib/python3.6/site-packages/cloudscraper:./cloudscraper" --onefile
+	mv dist/dlcfbp .
 
 # Run
 
