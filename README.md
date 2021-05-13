@@ -6,7 +6,7 @@ Pour télécharger l'executable vous pouvez cliquer [ici](https://github.com/ada
 
 ## Usage
 
-	./dofus_retro_updater [update|uninstall]
+	$ ./dofus_retro_updater [update|uninstall]
 
 ## Devs
 
